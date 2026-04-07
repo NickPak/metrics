@@ -66,7 +66,7 @@ Your import statements remain unchanged:
 import "github.com/VictoriaMetrics/metrics"
 ```
 
-> Tags follow the upstream version with a `-perf` suffix (e.g., `v1.43.1-perf`). Check [releases](https://github.com/NickPak/metrics/tags) for the latest version.###
+> Tags follow the upstream version with a `-perf` suffix (e.g., `v1.43.1-perf`). Check [releases](https://github.com/NickPak/metrics/tags) for the latest version.
 
 ### Upstream Sync
 
