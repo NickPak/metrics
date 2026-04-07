@@ -1,4 +1,4 @@
-## ## ⚡ High-Performance Fork — `optimize/zero-alloc` branch
+## ⚡ High-Performance Fork — `optimize/zero-alloc` branch
 
 This is a performance-optimized fork of [VictoriaMetrics/metrics](https://github.com/VictoriaMetrics/metrics), maintained on the **`optimize/zero-alloc`** branch.
 
