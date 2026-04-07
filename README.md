@@ -51,18 +51,13 @@ This branch includes two key optimizations ([PR #115](https://github.com/Victori
 
 If your application has **a large number of metrics** (e.g., high-connection ServiceMesh, API gateways with per-endpoint metrics), the default implementation's allocation overhead and GC pressure can become significant. This branch eliminates that bottleneck.
 
-### Usage
+###### Usage
 
-Since the `go.mod` module path remains `github.com/VictoriaMetrics/metrics`, use `replace` in your `go.mod`:
+Since the `go.mod` module path remains `github.com/VictoriaMetrics/metrics`, use `replace` to point to this fork:
 
 ```bash
-go get github.com/VictoriaMetrics/metrics@latest
-```
-
-Then add to your `go.mod`:
-
-```
-replace github.com/VictoriaMetrics/metrics => github.com/NickPak/metrics v0.0.0-20260403035231-0ff3a3acf825
+go mod edit -replace github.com/VictoriaMetrics/metrics=github.com/NickPak/metrics@v1.43.1-perf
+go mod tidy
 ```
 
 Your import statements remain unchanged:
@@ -70,6 +65,8 @@ Your import statements remain unchanged:
 ```go
 import "github.com/VictoriaMetrics/metrics"
 ```
+
+> Tags follow the upstream version with a `-perf` suffix (e.g., `v1.43.1-perf`). Check [releases](https://github.com/NickPak/metrics/tags) for the latest version.###
 
 ### Upstream Sync
 
